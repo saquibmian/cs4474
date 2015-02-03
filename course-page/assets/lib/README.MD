@@ -1,0 +1,1 @@
+This folder holds any third-party resources, like jQuery and bootstrap. 
