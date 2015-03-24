@@ -1,0 +1,152 @@
+.professor {
+	background-color: #4F2683;
+}
+
+.padding-fix {
+	padding: 0;	
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.clip-circle {
+	-webkit-clip-path: circle(50% at 50% 50%);
+	clip-path: circle(50% at 50% 50%);
+}
+
+.display-fix {
+	  flex-direction: column;
+}
+
+.professor-info {
+	color: white;
+	font-family: "Lato";
+	text-align: center;
+}
+
+.professor-title, .professor-first-name, .professor-last-name {
+	font-style: normal;
+	font-size: 60px;
+}
+
+.professor-title {
+	font-weight: 300;
+}
+
+.professor-first-name {
+	font-weight: 100;
+}
+
+.professor-last-name {
+	font-weight: 600;
+}
+
+.professor-position {
+	color: #807F83;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 20px;
+	margin-top: -20px;
+}
+
+.table-fix {
+	margin: 0 auto;
+}
+
+.info-field {
+	color: white;
+	text-align: right;
+	font-weight: 100;
+	font-style: normal;
+	font-size: 20px;
+	line-height: 30px;
+	padding-right: 20px;
+}
+
+.email, .tel, .fax, .office {
+	color: white;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.menu-bar {
+	height: 60px;
+	background-color: #807F83;
+}
+
+.navigation {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.navigation li a{
+	height: 50px;
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
+	line-height: 60px;
+	font-weight: 100;
+	padding: 10px;
+}
+
+@media (min-width: 0px) {
+ 	.professor {
+    	height: 100%;
+	}
+	
+	.center {
+   		padding-top: 5%;
+    }
+	
+	.clip-circle {
+		height: 40%;
+	}
+}
+
+@media (min-width: 768px) {
+ 	.professor {
+    	height: 75%;
+	}
+	
+	.center {
+   		padding-top: 5%;
+    }
+    
+	.clip-circle {
+		height: 40%;
+	}
+}
+@media (min-width: 992px) {
+  	.professor {
+    	height: 50%;
+	}
+	
+	.center {
+   		height: 100%;
+   		align-items: center;
+   		padding-top: 0;
+    }
+	
+	.clip-circle {
+		height: 80%;
+	}
+}
+@media (min-width: 1200px) {
+	.professor {
+    	height: 50%;
+	}
+	
+	.center {
+   		height: 100%;
+   		align-items: center;
+   		padding-top: 0;
+    }
+	
+	.clip-circle {
+		height: 80%;
+	}
+}

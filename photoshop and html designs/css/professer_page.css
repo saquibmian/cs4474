@@ -1,23 +1,35 @@
+body {
+	background-color: #eeeeee;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-filler {
+	flex-grow: 7;
+}
+
+.header-filler-2 {
+	flex-grow: 3;
+}
+
 .professor {
 	background-color: #4F2683;
 }
 
-.padding-fix {
-	padding: 0;	
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-}
-
 .clip-circle {
+	height: 300px;
+	width: auto;
+
 	-webkit-clip-path: circle(50% at 50% 50%);
 	clip-path: circle(50% at 50% 50%);
-}
-
-.display-fix {
-	  flex-direction: column;
 }
 
 .professor-info {
@@ -48,10 +60,11 @@
 	font-weight: 300;
 	font-style: normal;
 	font-size: 20px;
-	margin-top: -20px;
+	margin-top: -5px;
+	padding-bottom: 10px;
 }
 
-.table-fix {
+.table-center {
 	margin: 0 auto;
 }
 
@@ -73,60 +86,101 @@
 	line-height: 30px;
 }
 
-@media (min-width: 0px) {
- 	.professor {
-    	height: 100%;
-	}
-	
-	.center {
-   		padding-top: 5%;
-    }
-	
-	.clip-circle {
-		height: 40%;
-	}
+.menu-bar {
+	height: 60px;
+	background-color: #807F83;
 }
 
-@media (min-width: 768px) {
- 	.professor {
-    	height: 75%;
+.navigation {
+	display: flex;
+}
+
+.navigation li a{
+	font-family: "Lato";
+	height: 50px;
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
+	line-height: 60px;
+	font-weight: 100;
+	padding: 10px 20px;
+}
+
+.navigation li a:hover {
+	color: #4F2683;
+}
+
+.box {
+	background-color: white;
+	border: 1px solid;
+	border-color: #807F83;
+	margin: 20px 0;
+}
+
+.box-header {
+	font-family: "Lato";
+	height: 40px;
+	color: white;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: 200;
+	background-color: #4F2683;
+	padding: 10px;
+}
+
+.box-content {
+	font-family: "Lato";
+	font-size: 18px;
+	padding: 30px;	
+	font-weight: 300;
+}
+
+@media (min-width: 0px) {
+	.header, .navigation {
+		flex-flow: column wrap;
 	}
-	
-	.center {
-   		padding-top: 5%;
-    }
-    
-	.clip-circle {
-		height: 40%;
+	.prof-img {
+		padding: 30px 0;
+	}
+	.professor-info {
+		padding-bottom: 40px;
+	}
+	.navigation li {
+		margin: 0 auto;
+	}
+	.box {
+		border-radius: 0;
 	}
 }
 @media (min-width: 992px) {
-  	.professor {
-    	height: 50%;
+	.container {
+		width: 992px;
 	}
-	
-	.center {
-   		height: 100%;
-   		align-items: center;
-   		padding-top: 0;
-    }
-	
-	.clip-circle {
-		height: 80%;
+	.header, .navigation {
+		flex-flow: row wrap;
+	}
+	.prof-img {
+		padding: 30px 0;
+	}
+	.navigation li {
+		position: relative;
+		margin: 0;
+	}
+	.navigation li.active-tab::before {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background: #4F2683;
+		content: '';
+	}
+	.box {
+		border-radius: 5px;
 	}
 }
 @media (min-width: 1200px) {
-	.professor {
-    	height: 50%;
-	}
-	
-	.center {
-   		height: 100%;
-   		align-items: center;
-   		padding-top: 0;
-    }
-	
-	.clip-circle {
-		height: 80%;
+	.container {
+		width: 1200px;
 	}
 }
