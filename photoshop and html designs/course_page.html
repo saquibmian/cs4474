@@ -10,7 +10,7 @@
 			<div class="menu">
 				<div class="container">
 					<ul class="menu-contents">
-						<div class="pancake">
+						<div id="pancake-btn" class="pancake">
 							<img class="clip-circle" src="artwork/pancake.png">
 						</div>
 						<li class="course-title">
@@ -48,6 +48,7 @@
 				</li>
 				
 				<li class="contents">
+					<div class="shade"></div>
 					<div class="box">
 						<div class="box-header">
 							Announcement: March 27th, 2015
@@ -79,5 +80,25 @@
 
 			</ul>
 		</div>
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript">
+			var body = $("body");
+				toggle_sidebar = false;
+
+			document.getElementById("pancake-btn").addEventListener("click", slide);
+
+			function slide() {
+				if (toggle_sidebar) {
+					toggle_sidebar = false;
+					body.removeClass("slide");
+					body.removeClass("lock");
+				}
+				else {
+					toggle_sidebar = true;
+					body.addClass("slide");
+					body.addClass("lock");
+				}
+			}
+		</script>
 	</body>
 </html>

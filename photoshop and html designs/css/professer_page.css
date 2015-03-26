@@ -96,7 +96,7 @@ body {
 	background-color: #807F83;
 }
 
-.menu-bar:hover {
+.menu-bar:hover, .menu-bar.expanded {
 	max-height: 600px;
 	transition: max-height 0.3s ease-in;
 	cursor: pointer;
@@ -170,7 +170,7 @@ body {
 		border-bottom: 1px solid;
 		border-color: white;
 	}
-	.menu-bar:hover .arrow {
+	.menu-bar:hover .arrow, .menu-bar.expanded .arrow{
 		-moz-transform:rotate(180deg);
 	    -webkit-transform:rotate(180deg);
 	    -o-transform:rotate(180deg);
