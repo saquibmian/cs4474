@@ -1,0 +1,218 @@
+body {
+	background-color: #eeeeee;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.menu-container {
+	background-color: #4F2683;
+	height: 60px;
+}
+
+.menu {
+	background-color: rgba(79, 38, 131, 0.95);
+	position: fixed;
+	width: 100%;
+}
+
+.menu-contents {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
+.pancake, .prof-img {
+	margin: 5px;
+}
+
+.pancake {
+	position: absolute;
+	cursor: pointer;
+}
+
+.clip-circle {
+	height: 50px;
+	width: auto;
+
+	-webkit-clip-path: circle(50% at 50% 50%);
+	clip-path: circle(50% at 50% 50%);
+}
+
+.prof-img {
+	float: right;
+	padding-left: 10px;
+}
+
+.course-title {
+	color: white;
+	font-family: "Lato";
+	line-height: 60px;
+	font-weight: 100;
+	font-size: 30px;
+}
+
+.course-code {
+	font-weight: 300;
+}
+
+.menu-filler {
+	flex-grow: 1;
+}
+
+.professor-info {
+	color: white;
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 100;
+	text-align: right;
+}
+
+.professor-title, .professor-first-name, .professor-last-name {
+	font-size: 20px;
+}
+
+.professor-last-name {
+	font-weight: 300;
+}
+
+.tel, .office {
+	font-size: 15px;
+}
+
+.body-container {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.sidebar {
+	position: fixed;
+	border: 1px solid;
+	border-color: #807F83;
+	margin: 20px 0;
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.sidebar-items li {
+	border-bottom: 1px solid;
+	border-color: #807F83;;
+}
+
+li.active-item, .sidebar-items li:hover {
+	background-color: #4F2683;
+	cursor: pointer;
+}
+
+.sidebar-items li a {
+	color: #4F2683;
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 300;
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+	text-decoration: none;
+	margin: 10px;
+}
+
+li.active-item a, .sidebar-items li:hover a {
+	color: white;
+}
+
+.box {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid;
+	border-color: #807F83;
+	margin: 20px 0;
+}
+
+.box-header {
+	font-family: "Lato";
+	height: 40px;
+	color: white;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: 200;
+	background-color: #4F2683;
+	padding: 10px;
+}
+
+.box-content {
+	font-family: "Lato";
+	font-size: 18px;
+	padding: 30px;	
+	font-weight: 300;
+	line-height: 20px;
+}
+
+@media (min-width: 0px) {
+	.pancake {
+		left: 0;
+	}
+	.course-title {
+		padding-left: 70px;
+	}
+	.course-name {
+		display: none;
+	}
+	.professor-info {
+		display: none;
+	}
+	.sidebar {
+		width: 80%;
+		left: -80%;
+	}
+	.contents {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+@media (min-width: 768px) {
+	.course-name {
+		display: inline;
+	}
+	.course-title {
+		padding-left: 90px;
+	}
+}
+@media (min-width: 992px) {
+	body {
+		background-image: url("../artwork/bigshield.gif");
+		background-position-x: 90%;
+	  	background-repeat: no-repeat;
+	}
+	.container {
+		width: 992px;
+	}
+	.pancake {
+		display: none;
+		left: -60px;
+	}
+	.course-title {
+		padding-left: 0;
+	}
+	.professor-info {
+		display: inline;
+	}
+	.sidebar {
+		width: 230px;
+		left: auto;
+	}
+	.contents {
+		width: 742;
+		margin-left: 250px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1200px;
+	}
+	.sidebar {
+		width: 280px;
+	}
+	.contents {
+		width: 900;
+		margin-left: 300px;
+	}
+}

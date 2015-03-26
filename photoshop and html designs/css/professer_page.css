@@ -24,6 +24,10 @@ body {
 	background-color: #4F2683;
 }
 
+.prof-img {
+	padding: 30px 0;
+}
+
 .clip-circle {
 	height: 280px;
 	width: auto;
@@ -39,12 +43,12 @@ body {
 }
 
 .professor-title, .professor-first-name, .professor-last-name {
-	font-style: normal;
 	font-size: 60px;
+	font-style: normal;
 }
 
 .professor-title {
-	font-weight: 300;
+	font-weight: 100;
 }
 
 .professor-first-name {
@@ -52,7 +56,7 @@ body {
 }
 
 .professor-last-name {
-	font-weight: 600;
+	font-weight: 300;
 }
 
 .professor-position {
@@ -60,8 +64,7 @@ body {
 	font-weight: 300;
 	font-style: normal;
 	font-size: 20px;
-	margin-top: -5px;
-	padding-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .table-center {
@@ -91,11 +94,26 @@ body {
     transition: max-height 0.3s ease-out;
     overflow: hidden;
 	background-color: #807F83;
-	overflow: hidden;
 }
+
+.menu-bar:hover {
+	max-height: 600px;
+	transition: max-height 0.3s ease-in;
+	cursor: pointer;
+}
+
 
 .navigation {
 	display: flex;
+}
+
+.arrow {
+	position: absolute;
+  	right: 10px;
+	margin-top: 20px;
+	height: 20;
+	width: auto;
+	transition: all 0.2s linear;
 }
 
 .navigation li a{
@@ -111,10 +129,11 @@ body {
 
 .navigation li a:hover {
 	color: #4F2683;
+	font-weight: 200;
 }
 
 .box {
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.65);
 	border: 1px solid;
 	border-color: #807F83;
 	margin: 20px 0;
@@ -136,14 +155,12 @@ body {
 	font-size: 18px;
 	padding: 30px;	
 	font-weight: 300;
+	line-height: 20px;
 }
 
 @media (min-width: 0px) {
 	.header, .navigation {
 		flex-flow: column wrap;
-	}
-	.prof-img {
-		padding: 30px 0;
 	}
 	.professor-info {
 		padding-bottom: 40px;
@@ -151,32 +168,38 @@ body {
 	.navigation li {
 		margin: 0 auto;
 		border-bottom: 1px solid;
-		border-color: #4F2683;
+		border-color: white;
 	}
-
-	.menu-bar:hover {
-		max-height: 500px;
-    	transition: max-height 0.3s ease-in;
-    	cursor: pointer;
+	.menu-bar:hover .arrow {
+		-moz-transform:rotate(180deg);
+	    -webkit-transform:rotate(180deg);
+	    -o-transform:rotate(180deg);
+	    transform:rotate(180deg)
+		transition: all 0.2s linear;
 	}
 
 	.navigation li:last-child {
 		border-bottom: none;
 	}
-
-	.box {
-		border-radius: 0;
-	}
 }
 @media (min-width: 992px) {
+	body {
+		background-image: url("../artwork/bigshield.gif");
+		background-position-x: 90%;
+	  	background-position-y: 50%;
+	  	background-repeat: no-repeat;
+	}
 	.container {
 		width: 992px;
 	}
 	.header, .navigation {
 		flex-flow: row wrap;
 	}
-	.prof-img {
-		padding: 30px 0;
+	.professor-info {
+		padding-bottom: 0;
+	}
+	.arrow {
+		display: none;
 	}
 	.navigation li {
 		position: relative;
@@ -191,9 +214,6 @@ body {
 		height: 3px;
 		background: #4F2683;
 		content: '';
-	}
-	.box {
-		border-radius: 5px;
 	}
 }
 @media (min-width: 1200px) {
