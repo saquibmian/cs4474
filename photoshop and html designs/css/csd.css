@@ -6,7 +6,7 @@ i.fa{
 	background-color: rgba(255, 255, 255, 0.75);
 }
 
-h2 {
+.box h2 {
 	font-family: "Lato";
 	height: 40px;
 	color: white;
@@ -17,7 +17,7 @@ h2 {
 	padding: 10px;
 }
 
-p {
+.box p {
 	font-family: "Lato";
 	font-size: 18px;
 	padding: 30px;	
@@ -31,12 +31,12 @@ p {
 		border: none;
 		border-bottom: 1px solid #807F83;
 	}
-	p {
+	.box p {
 		padding: 10px;
 	}
 }
 @media (min-width: 768px) {
-	p {
+	.box p {
 		padding: 20px;
 	}
 }
@@ -45,7 +45,7 @@ p {
 		margin: 20px 0;
 		border: 1px solid #807F83;
 	}
-	p {
+	.box p {
 		padding: 30px;
 	}
 }
