@@ -6,7 +6,7 @@ i.fa{
 	background-color: rgba(255, 255, 255, 0.75);
 }
 
-#content-container h2 {
+#content-container h1 {
 	font-family: "Lato";
 	height: 40px;
 	color: white;
@@ -23,6 +23,7 @@ i.fa{
 	padding: 30px;	
 	font-weight: 300;
 	line-height: 1.5;
+	background-color: rgba(255, 255, 255, 0.75);
 }
 
 @media (min-width: 0px) {
