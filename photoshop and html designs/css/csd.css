@@ -6,7 +6,7 @@ i.fa{
 	background-color: rgba(255, 255, 255, 0.75);
 }
 
-#content-container h1 {
+.box-header {
 	font-family: "Lato";
 	height: 40px;
 	color: white;
@@ -17,13 +17,12 @@ i.fa{
 	padding: 10px;
 }
 
-#content-container p {
+.box-content {
 	font-family: "Lato";
 	font-size: 18px;
 	padding: 30px;	
 	font-weight: 300;
 	line-height: 1.5;
-	background-color: rgba(255, 255, 255, 0.75);
 }
 
 @media (min-width: 0px) {
@@ -32,12 +31,12 @@ i.fa{
 		border: none;
 		border-bottom: 1px solid #807F83;
 	}
-	p {
+	.box-content {
 		padding: 10px;
 	}
 }
 @media (min-width: 768px) {
-	#content-container p {
+	.box-content {
 		padding: 20px;
 	}
 }
@@ -46,7 +45,7 @@ i.fa{
 		margin: 20px 0;
 		border: 1px solid #807F83;
 	}
-	#content-container p {
+	.box-content {
 		padding: 30px;
 	}
 }
