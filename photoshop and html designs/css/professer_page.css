@@ -163,7 +163,7 @@ body {
 	body {
 		background-image: url("../artwork/bigshield.gif");
 		background-position-x: 90%;
-	  	background-position-y: 50%;
+	  	background-position-y: 350px;
 	  	background-repeat: no-repeat;
 	}
 	.container {
