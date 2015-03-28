@@ -7,16 +7,26 @@ body {
 }
 
 .header {
-	display: flex;
+	display: -webkit-flex;
+  	display: flex;
+
+  	-webkit-flex-wrap: wrap;
+  	flex-wrap: wrap;
+
+  	-webkit-justify-content: center;
 	justify-content: center;
+	
+	-webkit-align-items: center;
 	align-items: center;
 }
 
 .header-filler {
+	-webkit-flex-grow: 7;
 	flex-grow: 7;
 }
 
 .header-filler-2 {
+	-webkit-flex-grow: 3;
 	flex-grow: 3;
 }
 
@@ -31,9 +41,7 @@ body {
 .clip-circle {
 	height: 280px;
 	width: auto;
-
-	-webkit-clip-path: circle(50% at 50% 50%);
-	clip-path: circle(50% at 50% 50%);
+	border-radius: 50%;
 }
 
 .professor-info {
@@ -91,20 +99,17 @@ body {
 
 .menu-bar {
 	max-height: 60px;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.2s ease-out;
     overflow: hidden;
 	background-color: #807F83;
 }
 
-.menu-bar:hover, .menu-bar.expanded {
-	max-height: 600px;
-	transition: max-height 0.3s ease-in;
-	cursor: pointer;
-}
-
-
 .navigation {
-	display: flex;
+  	display: flex;
+  	display: -webkit-flex;
+
+  	align-items: center;
+	-webkit-align-items: center;
 }
 
 .arrow {
@@ -116,68 +121,40 @@ body {
 	transition: all 0.2s linear;
 }
 
-.navigation li a{
+.navigation li {
+	font-family: "Lato";
+	color: white;
+	font-size: 25px;
+	line-height: 40px;
+	font-weight: 100;
+	padding: 10px 20px;
+}
+
+.navigation li a {
 	font-family: "Lato";
 	height: 50px;
 	color: white;
 	text-decoration: none;
 	font-size: 25px;
-	line-height: 60px;
-	font-weight: 100;
-	padding: 10px 20px;
-}
-
-.navigation li a:hover {
-	color: #4F2683;
-	font-weight: 200;
-}
-
-.box {
-	background-color: rgba(255, 255, 255, 0.65);
-	border: 1px solid;
-	border-color: #807F83;
-	margin: 20px 0;
-}
-
-.box-header {
-	font-family: "Lato";
-	height: 40px;
-	color: white;
-	font-size: 30px;
 	line-height: 40px;
-	font-weight: 200;
-	background-color: #4F2683;
-	padding: 10px;
-}
-
-.box-content {
-	font-family: "Lato";
-	font-size: 18px;
-	padding: 30px;	
-	font-weight: 300;
-	line-height: 20px;
+	font-weight: 100;
 }
 
 @media (min-width: 0px) {
 	.header, .navigation {
-		flex-flow: column wrap;
+		flex-direction: column;
+		-webkit-flex-direction: column;
 	}
 	.professor-info {
 		padding-bottom: 40px;
 	}
 	.navigation li {
-		margin: 0 auto;
 		border-bottom: 1px solid;
 		border-color: white;
 	}
-	.menu-bar:hover .arrow, .menu-bar.expanded .arrow{
-		-moz-transform:rotate(180deg);
-	    -webkit-transform:rotate(180deg);
-	    -o-transform:rotate(180deg);
-	    transform:rotate(180deg)
-		transition: all 0.2s linear;
+	.navigation li.active-tab {
+		border-color: #4F2683;
 	}
-
 	.navigation li:last-child {
 		border-bottom: none;
 	}
@@ -193,7 +170,8 @@ body {
 		width: 992px;
 	}
 	.header, .navigation {
-		flex-flow: row wrap;
+		flex-direction: row;
+		-webkit-flex-direction: row;
 	}
 	.professor-info {
 		padding-bottom: 0;

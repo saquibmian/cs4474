@@ -2,16 +2,11 @@ body {
 	background-color: #eeeeee;
 }
 
-.lock {
-	overflow: hidden;
-}
-
 .container {
 	margin: 0 auto;
 }
 
 .menu-container {
-	background-color: #4F2683;
 	height: 60px;
 }
 
@@ -22,8 +17,16 @@ body {
 }
 
 .menu-contents {
-	display: flex;
-	flex-flow: row wrap;
+	display: -webkit-flex;
+  	display: flex;
+
+  	flex-direction: row;
+	-webkit-flex-direction: row;
+
+  	-webkit-flex-wrap: wrap;
+  	flex-wrap: wrap;
+	
+	-webkit-align-items: center;
 	align-items: center;
 }
 
@@ -32,16 +35,19 @@ body {
 }
 
 .pancake {
-	position: absolute;
+	z-index: 1;
+	position: fixed;
 	cursor: pointer;
+
+	color: white;
+  	font-size: 30px;
+  	padding: 10px;
 }
 
 .clip-circle {
 	height: 50px;
 	width: auto;
-
-	-webkit-clip-path: circle(50% at 50% 50%);
-	clip-path: circle(50% at 50% 50%);
+	border-radius: 50%;
 }
 
 .prof-img {
@@ -62,6 +68,7 @@ body {
 }
 
 .menu-filler {
+	-webkit-flex-grow: 1;
 	flex-grow: 1;
 }
 
@@ -73,39 +80,64 @@ body {
 	text-align: right;
 }
 
+.professor-info li {
+	margin-bottom: 2px
+}
+
+.professor-info li:last-child {
+	margin-bottom: 0;
+}
+
 .professor-title, .professor-first-name, .professor-last-name {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .professor-last-name {
 	font-weight: 300;
 }
 
-.tel, .office {
-	font-size: 15px;
+.email, .office {
+	font-size: 13px;
 }
 
 .body-container {
-	display: flex;
-	flex-flow: row wrap;
+	display: -webkit-flex;
+  	display: flex;
+	
+	flex-direction: row;
+	-webkit-flex-direction: row;
+
+  	-webkit-flex-wrap: wrap;
+  	flex-wrap: wrap;
 }
 
 .sidebar {
 	position: fixed;
-	border: 1px solid;
-	border-color: #807F83;
-	margin: 20px 0;
-	background: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.75);
+	overflow-y: scroll; 
+
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+}
+
+.sidebar::-webkit-scrollbar { 
+	width: 0 !important
 }
 
 .sidebar-items li {
-	border-bottom: 1px solid;
-	border-color: #807F83;;
+	border: 1px solid;
+	border-bottom: none;
+	border-color: #807F83;
+	cursor: pointer;
 }
 
-li.active-item, .sidebar-items li:hover {
+.sidebar-items li:last-child {
+	border-bottom: 1px solid;
+	border-color: #807F83;
+}
+
+li.active-item {
 	background-color: #4F2683;
-	cursor: pointer;
 }
 
 .sidebar-items li a {
@@ -120,65 +152,30 @@ li.active-item, .sidebar-items li:hover {
 	margin: 10px;
 }
 
-li.active-item a, .sidebar-items li:hover a {
+li.active-item a {
 	color: white;
-}
-
-.slide .sidebar{
-	left: 0;
-	transition: all 0.3s ease-in;
 }
 
 .contents {
-	left: 0;
-	transition: all 0.3s ease-in;
+	z-index: -1;
+	position: absolute;
+	left: auto;
 }
 
 .shade {
+	position: fixed;
+
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0);
-	position: fixed;
-	transition: all 0.3s ease-out;
-}
-
-.slide .shade {
-	background-color: rgba(0, 0, 0, 0.7);
-	transition: all 0.3s ease-in;
-}
-
-.box {
-	background-color: rgba(255, 255, 255, 0.8);
-	border: 1px solid;
-	border-color: #807F83;
-	margin: 20px 0;
-}
-
-.box-header {
-	font-family: "Lato";
-	height: 40px;
-	color: white;
-	font-size: 30px;
-	line-height: 40px;
-	font-weight: 200;
-	background-color: #4F2683;
-	padding: 10px;
-}
-
-.box-content {
-	font-family: "Lato";
-	font-size: 18px;
-	padding: 30px;	
-	font-weight: 300;
-	line-height: 20px;
+	background-color: black;
 }
 
 @media (min-width: 0px) {
-	.pancake {
-		left: 0;
+	.lock {
+		overflow: hidden;
 	}
 	.course-title {
-		padding-left: 70px;
+		padding-left: 50px;
 	}
 	.course-name {
 		display: none;
@@ -186,19 +183,92 @@ li.active-item a, .sidebar-items li:hover a {
 	.professor-info {
 		display: none;
 	}
+	.menu {
+		left: 0;
+		transition: left 0.2s ease-out;
+	}
+	.pancake {
+		left: 0;
+		transition: left 0.2s ease-out;
+	}
+	.shade {
+		z-index: -1;
+		opacity: 0;
+		left: 0;
+		transition: all 0.2s ease-out;
+	}
 	.sidebar {
-		width: 70%;
-		left: -70%;
-		transition: all 0.3s ease-out;
+		top:0;
+		height: 100%;
+
+		width: 80%;
+		width: -webkit-calc(100% - 60px);
+	    width: -moz-calc(100% - 60px);
+	    width: calc(100% - 60px);
+
+		left: 80%;
+		left: -webkit-calc(-100% + 60px);
+	    left: -moz-calc(-100% + 60px);
+	    left: calc(-100% + 60px);
+		transition: left 0.2s ease-out;
 	}
 	.contents {
 		width: 100%;
 		margin-left: 0;
+		left:0;
+		transition: left 0.2s ease-out;
+	}
+	.slide .shade {
+		z-index: 1;
+		opacity: 0.7;
+		left: 80%;
+		left: -webkit-calc(100% - 60px);
+	    left: -moz-calc(100% - 60px);
+	    left: calc(100% - 60px);
+		transition: all 0.2s ease-in;
+	}
+	.slide .pancake {
+		left: 80%;
+		left: -webkit-calc(100% - 60px);
+	    left: -moz-calc(100% - 60px);
+	    left: calc(100% - 60px);
+		transition: left 0.2s ease-in;
+	}
+	.slide .menu {
+		left: 80%;
+		left: -webkit-calc(100% - 60px);
+	    left: -moz-calc(100% - 60px);
+	    left: calc(100% - 60px);
+		transition: left 0.2s ease-in;
+	}
+	.slide .sidebar {
+		left: 0;
+		transition: left 0.2s ease-in;
 	}
 	.slide .contents {
-		position: absolute;
-		left: 70%;
-		transition: all 0.3s ease-in;
+		left: 80%;
+		left: -webkit-calc(100% - 60px);
+	    left: -moz-calc(100% - 60px);
+	    left: calc(100% - 60px);
+		transition: left 0.2s ease-in;
+	}
+}
+@media (min-width: 450px) {
+	.sidebar {
+		width: 400px;
+		left: -400px;
+	}
+	.slide .shade {
+		left: 400px;
+	}
+	.slide .pancake {
+		left: 400px;
+	}
+	.slide .menu {
+		left: 400px;
+	}
+	.slide .contents {
+		left: 400px;
 	}
 }
 @media (min-width: 768px) {
@@ -208,21 +278,15 @@ li.active-item a, .sidebar-items li:hover a {
 	.course-title {
 		padding-left: 90px;
 	}
-	.sidebar {
-		width: 50%;
-		left: -50%;
-		transition: all 0.3s ease-out;
-	}
-	.slide .contents {
-		left: 50%;
-		transition: all 0.3s ease-in;
-	}
 }
 @media (min-width: 992px) {
 	body {
 		background-image: url("../artwork/bigshield.gif");
 		background-position-x: 90%;
 	  	background-repeat: no-repeat;
+	}
+	.lock {
+		overflow: auto;
 	}
 	.container {
 		width: 992px;
@@ -238,18 +302,32 @@ li.active-item a, .sidebar-items li:hover a {
 		display: inline;
 	}
 	.sidebar {
+		height: auto;
 		width: 230px;
 		left: auto;
+		top: auto;
+		margin: 20px 0;
 	}
 	.contents {
 		width: 742;
 		margin-left: 250px;
 		position: initial;
+		left: auto;
+	}
+	.shade {
+		display: none;
+	}
+	.slide .menu {
+		left: auto;
 	}
 	.slide .sidebar {
 		left: auto;
 	}
 	.slide .contents{
+		left: auto;
+	}
+	.slide .shade {
+		display: none;
 		left: auto;
 	}
 }
