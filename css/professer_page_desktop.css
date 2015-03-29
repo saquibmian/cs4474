@@ -4,7 +4,7 @@
 	cursor: pointer;
 }
 
-.navigation li a:hover {
+.navigation a:hover {
 	color: #4F2683;
 	font-weight: 200;
 }
