@@ -1,0 +1,1 @@
+This folder holds our own (non-Angular) JS files

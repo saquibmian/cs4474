@@ -1,0 +1,163 @@
+<html>
+	<head>
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/course_page.css">
+		<link rel="stylesheet" type="text/css" href="css/csd.css">
+		<link href="http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">	
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	</head>
+	
+	<body>
+		<div id="shade-btn" class="shade"></div>
+		<div class="pancake">
+			<i id="pancake-btn" class="fa fa-bars"></i>
+		</div>
+		<div class="menu-container">
+			<div class="menu">
+				<div class="container">
+					<ul class="menu-contents">
+						<li class="course-title">
+							<span class="course-code">CS 2209B</span>
+							<span class="course-name">:&nbsp;&nbsp;Applied Logic for Computer Science</span>
+						</li>
+						<li class="menu-filler"></li>
+						<ul class="professor-info">
+							<li class="prof-name">
+								<span class="professor-title"></span>
+								<span class="professor-first-name">Lila</span>
+								<span class="professor-last-name">Kari</span>
+							</li>
+							<li class="email">lila.kari@uwo.ca</li> 
+							<li class="office">Middlesex College 385</li> 
+						</ul>
+						<div class="prof-img">
+							<a href="index.html"><img class="resize-circle clip-circle" src="artwork/filler_professor.jpg"></a>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<ul class="body-container">
+				<li class="sidebar">
+					<ul class="sidebar-items">
+					 	<li class="active-item"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+					 	<li><a href="#"><i class="fa fa-file-text-o"></i>Lecture Notes</a></li>
+					 	<li><a href="#"><i class="fa fa-file-code-o"></i>Assignments</a></li>
+					 	<li><a href="#"><i class="fa fa-wheelchair"></i>Consulting</a></li>
+					</ul>
+				</li>
+				
+				<li>
+					<div class="contents">
+						<div class="box">
+							<div class="box-header">
+								Class Schedule
+							</div>
+							<div class="box-content">
+								 Mondays and Wednesdays, 11:30am- 1:30pm, SEB 2100 
+							</div>
+						</div>
+
+						<div class="box">
+							<div class="box-header">
+								Prerequisites 
+							</div>
+							<div class="box-content">							
+								 Computer Science 1027A/B, 1037A/B, or Computer Science 2101A/B, in each case with at least 65%, and one full course or equivalent chosen from the following, with at least 60% in each: Applied Mathematics 1201A/B or the former Calculus 1201A/B, Applied Mathematics 1413, Calculus 1000A/B, 1100A/B, 1301A/B, 1501A/B, Mathematics 1600A/B or the former Linear Algebra 1600A/B, or permission of the Department.<br><br>
+
+								Unless you have either the requisites for this course or written special permission from your Dean to enroll in it, you will be removed from this course and it will be deleted from your record. This decision may not be appealed. You will receive no adjustment to your fees in the event that you are dropped from a course for failing to have the necessary prerequisites. 
+							</div>
+						</div>
+
+						<div class="box">
+							<div class="box-header">
+								Course Materials 
+							</div>
+							<div class="box-content">	
+								There is no textbook for this course. Students should take notes in class and work from these. The instructor's notes for the course are available electronically as pdf or postscript files on the course website (see below). Please be advised that these are copies of the lecture overheads, not complete course notes, and are not a substitute for attending lectures. The recommended reading is J.Rubin. Mathematical logic: applications and theory, Saunders College Publishing, 1990. There are also quite a few books on mathematical logic in the library. All these may be relevant to certain parts of the course and, for those, they could be useful background reading. However, there is no book that would actually get close to covering the whole course. 
+							</div>
+						</div>
+
+						<div class="box">
+							<div class="box-header">
+								Topics
+							</div>
+							<div class="box-content">	
+							    Translations from English into the language of propositional logic;<br>
+							    Valid and invalid arguments;<br>
+							    Formal deduction and its role in proving validity of arguments;<br>
+							    Logic and Computer Science: how to build circuits from logic gates; how to minimize circuits using propositional calculus;<br>
+							    Refining the tools: translations from English into the language of predicate logic;<br>
+							    Valid and invalid arguments, formal deduction in predicate logic;<br>
+							    Applications of predicate calculus to Computer Science: artificial intelligence, automated theorem-provers, expert systems;<br>
+							    Logic and DNA Computing. <br>
+							</div>
+						</div>
+
+						<div class="box">
+							<div class="box-header">
+								Student Evaluation
+							</div>
+							<div class="box-content">	
+							    The overall course grade, out of 100, will be calculated as follows:<br>
+							    5 in-class quizzes, each worth 1%, the sum of which will constitute 5% of the final grade;<br>
+							    5 assignments, each worth 4%, the sum of which will constitute 20% of the final grade;<br>
+							    1 in-class midterm exam worth 25%;<br>
+							    The final exam worth 50%. <br>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+    	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript">
+			var body = $('body'),
+				js = document.createElement("script"),
+				mobile_jq = document.createElement("script"),
+				link = document.createElement("link"),
+				head = document.getElementsByTagName('head')[0];
+
+			link.rel = "stylesheet";
+	    	link.type = "text/css";
+		    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		    	mobile_jq.src = "js/jquery.mobile.custom.min.js";
+			    js.src = "js/mobile_course.js";
+
+			    document.body.appendChild(mobile_jq);
+		    	document.body.appendChild(js);
+
+		    	//link.href = "css/course_page_mobile.css";
+		    }
+		    else
+		    	link.href = "css/course_page_desktop.css";
+
+		    document.head.appendChild(link);
+		</script>
+		<script type="text/javascript">
+			var body = $("body"),
+			toggle_sidebar = false;
+
+			document.getElementById("pancake-btn").addEventListener("click", slide);
+			document.getElementById("shade-btn").addEventListener("click", slide);
+
+			function slide() {
+				if (toggle_sidebar) slideIn();
+				else slideOut();
+			}
+			function slideIn() {
+				toggle_sidebar = false;
+				body.removeClass("slide");
+				body.removeClass("lock");
+			}
+			function slideOut() {
+				toggle_sidebar = true;
+				body.addClass("slide");
+				body.addClass("lock");
+			}
+		</script>
+	</body>
+</html>
