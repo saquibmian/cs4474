@@ -6,18 +6,20 @@ body {
 	margin: 0 auto;
 }
 
-.header {
+.header, .navigation {
 	display: -webkit-flex;
   	display: flex;
 
   	-webkit-flex-wrap: wrap;
   	flex-wrap: wrap;
-
-  	-webkit-justify-content: center;
-	justify-content: center;
 	
 	-webkit-align-items: center;
 	align-items: center;
+}
+
+.header {
+	-webkit-justify-content: center;
+	justify-content: center;
 }
 
 .header-filler {
@@ -41,7 +43,7 @@ body {
 .clip-circle {
 	height: 280px;
 	width: auto;
-	border-radius: 50%;
+	border-radius: 50%
 }
 
 .professor-info {
@@ -102,14 +104,6 @@ body {
     transition: max-height 0.2s ease-out;
     overflow: hidden;
 	background-color: #807F83;
-}
-
-.navigation {
-  	display: flex;
-  	display: -webkit-flex;
-
-  	align-items: center;
-	-webkit-align-items: center;
 }
 
 .arrow {

@@ -25,6 +25,10 @@ i.fa{
 	line-height: 1.5;
 }
 
+p {
+	margin-bottom: 20px;
+}
+
 @media (min-width: 0px) {
 	.box {
 		margin: 20px  0  0  0; 
