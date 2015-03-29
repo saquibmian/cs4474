@@ -1,0 +1,14 @@
+.sidebar-items li:hover {
+	background-color: #4F2683;
+}
+
+.sidebar-items li:hover a {
+	color: white;
+}
+
+body {
+	background-image: url("../artwork/bigshield.gif");
+	background-position-x: 90%;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+}
