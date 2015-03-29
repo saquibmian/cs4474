@@ -1,51 +1,66 @@
 body {
-	background-color: #eeeeee;
+	background-color: #eeeeee
 }
 
 .container {
-	margin: 0 auto;
+	margin: 0 auto
 }
 
 .menu-container {
-	height: 60px;
+	height: 60px
+}
+
+.menu, .pancake, .sidebar, .shade {
+	position: fixed
 }
 
 .menu {
-	background-color: rgba(79, 38, 131, 0.95);
-	position: fixed;
-	width: 100%;
+	background-color: rgba(79, 38, 131, 0.95)
 }
 
-.menu-contents {
+.menu, .shade {
+	width: 100%
+}
+
+.menu-contents, .body-container {
 	display: -webkit-flex;
   	display: flex;
-
-  	flex-direction: row;
+	
+	flex-direction: row;
 	-webkit-flex-direction: row;
 
   	-webkit-flex-wrap: wrap;
   	flex-wrap: wrap;
-	
+}
+
+.menu-contents {
 	-webkit-align-items: center;
 	align-items: center;
 }
 
 .pancake, .prof-img {
-	margin: 5px;
+	margin: 5px
 }
 
 .pancake {
 	z-index: 1;
-	position: fixed;
-	cursor: pointer;
-
-	color: white;
-  	font-size: 30px;
   	padding: 10px;
 }
 
+.pancake, .sidebar-items a {
+	cursor: pointer
+}
+
+.pancake, .course-title, .professor-info {
+	color: white
+}
+
+.pancake, .course-title {
+	font-size: 30px;
+}
+
 .clip-circle {
-	height: 280px;
+	height: 50px;
 	width: auto;
 	border-radius: 50%
 }
@@ -56,15 +71,20 @@ body {
 }
 
 .course-title {
-	color: white;
-	font-family: "Lato";
 	line-height: 60px;
-	font-weight: 100;
-	font-size: 30px;
 }
 
-.course-code {
-	font-weight: 300;
+.course-title, .professor-info, .sidebar-items a  {
+	font-family: "Lato";
+	font-style: normal;
+}
+
+.course-title, .professor-info {
+	font-weight: 100
+}
+
+.course-code, .professor-last-name, .sidebar-items a {
+	font-weight: 300
 }
 
 .menu-filler {
@@ -73,10 +93,6 @@ body {
 }
 
 .professor-info {
-	color: white;
-	font-family: "Lato";
-	font-style: normal;
-	font-weight: 100;
 	text-align: right;
 }
 
@@ -92,27 +108,11 @@ body {
 	font-size: 18px;
 }
 
-.professor-last-name {
-	font-weight: 300;
-}
-
 .email, .office {
 	font-size: 13px;
 }
 
-.body-container {
-	display: -webkit-flex;
-  	display: flex;
-	
-	flex-direction: row;
-	-webkit-flex-direction: row;
-
-  	-webkit-flex-wrap: wrap;
-  	flex-wrap: wrap;
-}
-
 .sidebar {
-	position: fixed;
 	background-color: rgba(255, 255, 255, 0.75);
 	overflow-y: scroll; 
 
@@ -121,39 +121,35 @@ body {
 }
 
 .sidebar::-webkit-scrollbar { 
-	width: 0 !important
+	width: 0!important
 }
 
-.sidebar-items li {
+.sidebar-items a {
+	display: block;
 	border: 1px solid;
 	border-bottom: none;
-	border-color: #807F83;
-	cursor: pointer;
-}
-
-.sidebar-items li:last-child {
-	border-bottom: 1px solid;
-	border-color: #807F83;
-}
-
-li.active-item {
-	background-color: #4F2683;
-}
-
-.sidebar-items li a {
+	padding: 19px 10px;
 	color: #4F2683;
-	font-family: "Lato";
-	font-style: normal;
-	font-weight: 300;
-	height: 60px;
-	line-height: 60px;
 	font-size: 20px;
 	text-decoration: none;
-	margin: 10px;
+	overflow-wrap: break-word;
 }
 
-li.active-item a {
-	color: white;
+.sidebar-items a, .sidebar-items:last-child {
+	border-color: #807F83
+}
+
+.sidebar-items:last-child {
+	border-bottom: 1px solid
+}
+
+.active-item {
+	background-color: #4F2683;
+	color: white!important;
+}
+
+i.fa{
+	margin-right: 10px;
 }
 
 .contents {
@@ -163,9 +159,6 @@ li.active-item a {
 }
 
 .shade {
-	position: fixed;
-
-	width: 100%;
 	height: 100%;
 	background-color: black;
 }

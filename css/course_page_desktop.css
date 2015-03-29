@@ -1,8 +1,5 @@
-.sidebar-items li:hover {
+.sidebar-items a:hover {
 	background-color: #4F2683;
-}
-
-.sidebar-items li:hover a {
 	color: white;
 }
 

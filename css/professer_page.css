@@ -2,7 +2,7 @@ body {
 	background-color: #eeeeee;
 }
 
-.container {
+.container, .table-style {
 	margin: 0 auto;
 }
 
@@ -46,57 +46,39 @@ body {
 	border-radius: 50%
 }
 
-.professor-info {
+.professor-info, .table-style, .navigation li, .navigation li a {
 	color: white;
 	font-family: "Lato";
-	text-align: center;
+	font-style: normal;
 }
 
 .professor-title, .professor-first-name, .professor-last-name {
 	font-size: 60px;
-	font-style: normal;
 }
 
-.professor-title {
+.professor-title, .professor-first-name, .info-field, .navigation li, .navigation li a {
 	font-weight: 100;
 }
 
-.professor-first-name {
-	font-weight: 100;
-}
-
-.professor-last-name {
+.professor-last-name, .professor-position, .table-style {
 	font-weight: 300;
 }
 
 .professor-position {
 	color: #807F83;
-	font-weight: 300;
-	font-style: normal;
 	font-size: 20px;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
-.table-center {
-	margin: 0 auto;
+.info-field, .table-style {
+	font-size: 20px;
+	line-height: 30px;
 }
 
 .info-field {
-	color: white;
 	text-align: right;
-	font-weight: 100;
-	font-style: normal;
-	font-size: 20px;
-	line-height: 30px;
 	padding-right: 20px;
-}
-
-.email, .tel, .fax, .office {
-	color: white;
-	font-weight: 300;
-	font-style: normal;
-	font-size: 20px;
-	line-height: 30px;
 }
 
 .menu-bar {
@@ -115,23 +97,14 @@ body {
 	transition: all 0.2s linear;
 }
 
-.navigation li {
-	font-family: "Lato";
-	color: white;
+.navigation li, .navigation li a {
 	font-size: 25px;
 	line-height: 40px;
-	font-weight: 100;
-	padding: 10px 20px;
 }
 
 .navigation li a {
-	font-family: "Lato";
 	height: 50px;
-	color: white;
 	text-decoration: none;
-	font-size: 25px;
-	line-height: 40px;
-	font-weight: 100;
 }
 
 @media (min-width: 0px) {
@@ -142,15 +115,18 @@ body {
 	.professor-info {
 		padding-bottom: 40px;
 	}
-	.navigation li {
-		border-bottom: 1px solid;
-		border-color: white;
+	.arrow {
+		display: inline;
 	}
-	.navigation li.active-tab {
-		border-color: #4F2683;
+	.navigation li {
+		padding: 10px 20px;
+		border-bottom: 1px solid white;
 	}
 	.navigation li:last-child {
 		border-bottom: none;
+	}
+	.navigation li.active-tab {
+		border-color: #4F2683;
 	}
 }
 @media (min-width: 992px) {
@@ -167,19 +143,12 @@ body {
 	.arrow {
 		display: none;
 	}
-	.navigation li {
-		position: relative;
-		margin: 0;
-		border-bottom: none;
+	.navigation li, .navigation li:last-child {
+		padding: 8px 20px;
+		border-bottom: 4px solid #807F83;
 	}
-	.navigation li.active-tab::before {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 3px;
-		background: #4F2683;
-		content: '';
+	.navigation li.active-tab {
+		border-color: #4F2683;
 	}
 }
 @media (min-width: 1200px) {
