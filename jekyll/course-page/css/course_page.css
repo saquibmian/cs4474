@@ -51,7 +51,7 @@ body {
 	cursor: pointer
 }
 
-.pancake, .course-title, .professor-info {
+.pancake, .course-title, .professor-info, .course-title a {
 	color: white
 }
 
@@ -81,6 +81,10 @@ body {
 
 .course-title, .professor-info {
 	font-weight: 100
+}
+
+.course-title a {
+	text-decoration: none
 }
 
 .course-code, .professor-last-name, .sidebar-items a {
