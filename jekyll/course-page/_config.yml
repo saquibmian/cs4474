@@ -30,3 +30,8 @@ defaults:
       type: "assignments"
     values:
       layout: "assignment"
+  -
+    scope:
+      type: "announcements"
+    values:
+      layout: "announcement"
