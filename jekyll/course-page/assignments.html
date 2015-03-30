@@ -1,0 +1,17 @@
+---
+title: Assignments
+icon: file-code-o
+index: 5
+---
+
+{% for assignment in site.assignments %}
+
+{% box assignment.title %}
+
+Posted: {{ assignment.date | date: "%b %-d %Y at %-I:%m %P" }}
+{{ assignment.summary }}
+<a href="{{assignment.url | prepend: site.baseurl }}">See the assignment</a>
+
+{% endbox %}
+
+{% endfor %}

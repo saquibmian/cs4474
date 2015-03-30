@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+{% assign prof = site.data.prof %}
+{% assign course = site.data.course %}
+
+	<head>
+	    <meta charset="utf-8">		
+	    <meta name="viewport" content="width=device-width initial-scale=1" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="{{ site.description }}">
+
+		<link rel="shortcut icon" href="artwork/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/course_page.css">
+		<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/csd.css">
+		<link href="http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+	    <title>CS {{ course.code }} - {{ course.title }}</title>
+	</head>
+  <body>
+
+	<div id="shade-btn" class="shade"></div>
+	<div class="pancake"><i id="pancake-btn" class="fa fa-bars"></i></div>
+	<div class="menu-container">
+		<div class="menu">
+			<div class="container"><div class="menu-contents">
+				<div class="course-title">
+					<!-- <a href="index.html"> -->
+						<span class="course-code">CS {{ course.code }}</span>
+						<span class="course-name">:&nbsp;&nbsp;{{ course.title }}</span>
+					<!-- </a> -->
+				</div>
+				<div class="menu-filler"></div>
+				<div class="professor-info">
+					<div class="prof-name">
+						<span class="professor-title"></span>
+						<span class="professor-first-name">{{ prof.firstName }}</span>
+						<span class="professor-last-name">{{ prof.lastName }}</span>
+					</div>
+					<div class="email"><span class="block-spam">BOTS</span>{{ prof.email }}</div> 
+					<div class="office">{{ prof.office }}</div> 
+				</div>
+				<div class="prof-img">
+					<a href="{{prof.siteUrl}}"><img class="clip-circle" src="artwork/prof-picture.jpg"></a>
+				</div>
+			</div></div>
+		</div>
+	</div>
+
+	<div class="container"><div class="body-container">
+		
+		<div class="sidebar">
+			<div class="sidebar-items">
+			{% assign sorted_pages = site.pages | sort:"index" %}
+			{% for p in sorted_pages %}
+				{% assign link = p.url | prepend: site.baseurl %}
+				{% assign target = "" %}
+				{% if p.link %}
+					{% assign link = p.link %}
+					{% assign target = "_blank" %}
+				{% endif %}
+				<a {% if p.url == page.url %}class="active-item"{% endif %} href="{{ link }}" target="{{ target }}">
+					{% if p.icon %}<i class="fa fa-{{ p.icon }}"></i>{% endif %}
+					{{ p.title }}
+				</a>
+			{% endfor %}
+			</div>
+		</div>
+		
+		<div class="contents">
+		{{ content }}
+		</div>
+	</div></div>
+
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+		var body = $('body'),
+			js = document.createElement("script"),
+			mobile_jq = document.createElement("script"),
+			link = document.createElement("link"),
+			head = document.getElementsByTagName('head')[0];
+
+		link.rel = "stylesheet";
+    	link.type = "text/css";
+	    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	    	mobile_jq.src = "js/jquery.mobile.custom.min.js";
+		    js.src = "{{site.baseurl}}/js/mobile_course.js";
+
+		    document.body.appendChild(mobile_jq);
+	    	document.body.appendChild(js);
+
+	    	//link.href = "{{site.baseurl}}/css/course_page_mobile.css";
+	    }
+	    else
+	    	link.href = "{{site.baseurl}}/css/course_page_desktop.css";
+
+	    document.head.appendChild(link);
+	</script>
+	<script type="text/javascript">
+		var body = $("body"),
+		toggle_sidebar = false;
+
+		document.getElementById("pancake-btn").addEventListener("click", slide);
+		document.getElementById("shade-btn").addEventListener("click", slide);
+
+		function slide() {
+			if (toggle_sidebar) slideIn();
+			else slideOut();
+		}
+		function slideIn() {
+			toggle_sidebar = false;
+			body.removeClass("slide");
+			body.removeClass("lock");
+		}
+		function slideOut() {
+			toggle_sidebar = true;
+			body.addClass("slide");
+			body.addClass("lock");
+		}
+	</script>
+</body>
+</html>
