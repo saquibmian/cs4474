@@ -22,7 +22,7 @@ body {
 	width: 100%
 }
 
-.menu-contents, .contents-container {
+.menu-contents, .body-container {
 	display: -webkit-flex;
   	display: flex;
 	
@@ -153,7 +153,6 @@ i.fa{
 }
 
 .contents {
-	z-index: -1;
 	position: absolute;
 	left: auto;
 }
