@@ -22,7 +22,7 @@ body {
 	width: 100%
 }
 
-.menu-contents, .body-container {
+.menu-contents, .contents-container {
 	display: -webkit-flex;
   	display: flex;
 	
