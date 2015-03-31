@@ -58,26 +58,6 @@ body {
 	overflow-wrap: break-word;
 }
 
-.box-content p {
-	margin-bottom: 10px;
-}
-
-.box-content p:last-child {
-	margin-bottom: 0;
-}
-
-.box-content ol, .box-content ul {
-	padding-left: 20px;
-}
-
-.box-content ol {
-	list-style: inherit;
-}
-
-.box-content ul {
-	list-style: square;
-}
-
 @media (min-width: 0px) {
 	.box {
 		margin: 20px  0  0  0; 
