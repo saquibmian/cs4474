@@ -14,6 +14,8 @@
 	font-weight: 200;
 	background-color: #4F2683;
 	overflow-wrap: break-word;
+	text-decoration: none;
+	display: block;
 
 	display: -webkit-flex;
   	display: flex;

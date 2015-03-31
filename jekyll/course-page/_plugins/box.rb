@@ -38,8 +38,8 @@ module Jekyll
       toReturn = '<div class="box">'
       
       if !(title.empty?)
-        toReturn << '<div class="box-header">'
-        toReturn << '<div class="box-title"><a href="' + url + '">' + title + '</a></div>'
+        toReturn << '<a href="' + url + '" class="box-header">'
+        toReturn << '<div class="box-title">' + title + '</div>'
         
         if !(date.nil?) || !(due.nil?)
           toReturn << '<div class="flex-fill"></div><table class="date-info"><tbody>'
@@ -54,7 +54,7 @@ module Jekyll
           toReturn << '</tbody></table>'
         end
 
-        toReturn << '</div>'
+        toReturn << '</a>'
       end
       toReturn << '<div class="box-content">' + output + '</div></div>'
 
