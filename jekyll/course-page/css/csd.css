@@ -1,3 +1,7 @@
+body {
+	margin: 0;
+}
+
 .block-spam {
 	display: none;
 }
@@ -27,11 +31,12 @@
 }
 
 .box-header .box-title {
-	padding: 15px;
+	padding: 15px;		
 }
 
 .box-header .date-info {
 	padding: 0 15px  10px 15px;
+	margin: auto;
 }
 
 .box-header .date-title {
@@ -50,6 +55,7 @@
 	padding: 30px;	
 	font-weight: 300;
 	line-height: 1.5;
+	overflow-wrap: break-word;
 }
 
 .box-content p {
@@ -88,8 +94,9 @@
 	.box-header .date-info {
 		text-align: left;
 		padding-top: 10px;
-		display: block;
 		background-color: #807F83;
+		margin: 0;
+		display: block;
 	}
 }
 @media (min-width: 768px) {
@@ -111,7 +118,8 @@
 	}
 	.box-header .date-info {
 		text-align: right;
-		margin: 0;
+		margin: auto;	
 		background-color: #4F2683;
+		display: inline;
 	}
 }

@@ -15,7 +15,8 @@ body {
 }
 
 .menu {
-	background-color: rgba(79, 38, 131, 0.95)
+	background-color: rgba(79, 38, 131, 0.95);
+	z-index: 1
 }
 
 .menu, .shade {
@@ -30,12 +31,12 @@ body {
 	-webkit-flex-direction: row;
 
   	-webkit-flex-wrap: wrap;
-  	flex-wrap: wrap;
+  	flex-wrap: wrap
 }
 
 .menu-contents {
 	-webkit-align-items: center;
-	align-items: center;
+	align-items: center
 }
 
 .pancake, .prof-img {
@@ -159,6 +160,7 @@ i.fa{
 .contents {
 	position: absolute;
 	left: auto;
+	z-index: 0;
 }
 
 .shade {
