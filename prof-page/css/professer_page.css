@@ -20,6 +20,9 @@ body {
 .header {
 	-webkit-justify-content: center;
 	justify-content: center;
+
+	margin: 0;
+  	list-style-type: none;
 }
 
 .header-filler {
@@ -140,7 +143,7 @@ body {
 		display: none
 	}
 	.navigation a, .navigation a:first-child {
-		padding: 15px 20px;
+		padding: 10px 20px;
 		border-bottom: 5px solid #807F83;
 	}
 	.navigation a.active-tab {
