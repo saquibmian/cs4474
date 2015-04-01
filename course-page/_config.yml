@@ -9,6 +9,7 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+timezone: UTC # this assumes no one will put offsets
 
 # Disabling excerpts
 excerpt_separator: ""
