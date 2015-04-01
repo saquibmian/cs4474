@@ -43,6 +43,10 @@ body {
 	padding: 30px 0;
 }
 
+.prof-name {
+	text-align: center;
+}
+
 .clip-circle {
 	height: 280px;
 	width: auto;
