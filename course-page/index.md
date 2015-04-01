@@ -4,7 +4,7 @@ icon: bullhorn
 index: 1
 ---
 
-{% for post in site.announcements %}
+{% for post in site.announcements reversed %}
 
 {% box post %}
 
