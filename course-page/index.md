@@ -8,7 +8,6 @@ index: 1
 
 {% box post %}
 
-Link: [here]({{ post.url }})
 {{ post.content }}
 
 {% endbox %}
