@@ -1,9 +1,13 @@
 ---
 title: Assignment 1 - Network Calculator
-date: 2015-01-01 21:21:45
-due: 2015-03-01 23:59:59
+date: 2014-09-25 08:15:00
+due: 2014-10-17 23:59:00
 
-summary: You will build a calculator!
+summary: "<p>Texas Instruments has a problem: no one wants a simple TI-83 calculator anymore that performs their calculations for them on the spot. Nay, they want an Internet-connected device that will submit mathematical expressions to a server. The server will then evaluate their expressions and return the results back to their device. Who cares about efficiency and speed? This is 2014. Connectivity is where it's at.</p>
+<p>
+In this assignment, you'll write two programs: a calculator client and a calculator server. The client will take a mathematical expression specified by a user on the command line and submit it over the network to the server. The server will then evaluate the expression, and return the result back to the client where it will be displayed to the user.
+</p>
+"
 ---
 
 <div class="panel-body">
