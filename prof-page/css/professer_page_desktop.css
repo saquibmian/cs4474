@@ -1,7 +1,14 @@
+body {
+	background-image: url("../artwork/bigshield.gif");
+	background-position-x: 90%;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed
+}
+
 .menu-bar:hover {
 	max-height: 600px;
 	transition: max-height 0.2s ease-in;
-	cursor: pointer;
+	cursor: pointer
 }
 
 .navigation a:hover {

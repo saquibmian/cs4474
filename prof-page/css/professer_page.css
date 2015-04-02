@@ -1,9 +1,9 @@
 body {
-	background-color: #eeeeee;
+	background-color: #eeeeee
 }
 
 .container, .table-style {
-	margin: 0 auto;
+	margin: 0 auto
 }
 
 .header, .navigation {
@@ -14,38 +14,39 @@ body {
   	flex-wrap: wrap;
 	
 	-webkit-align-items: center;
-	align-items: center;
+	align-items: center
 }
 
 .header {
-	-webkit-justify-content: center;
-	justify-content: center;
-
 	margin: 0;
   	list-style-type: none;
+
+	-webkit-justify-content: center;
+	justify-content: center
 }
 
 .header-filler {
 	-webkit-flex-grow: 7;
-	flex-grow: 7;
+	flex-grow: 7
 }
 
 .header-filler-2 {
 	-webkit-flex-grow: 3;
-	flex-grow: 3;
+	flex-grow: 3
 }
 
 .professor {
 	background-color: #4F2683;
 	background-image: url("../artwork/background-art.jpg");
+	background
 }
 
 .prof-img {
-	padding: 30px 0;
+	padding: 30px 0
 }
 
 .prof-name {
-	text-align: center;
+	text-align: center
 }
 
 .clip-circle {
@@ -57,36 +58,36 @@ body {
 .professor-info, .table-style, .navigation a {
 	color: white;
 	font-family: "Lato";
-	font-style: normal;
+	font-style: normal
 }
 
 .professor-title, .professor-first-name, .professor-last-name {
-	font-size: 60px;
+	font-size: 60px
 }
 
 .professor-title, .professor-first-name, .info-field, .navigation a {
-	font-weight: 100;
+	font-weight: 100
 }
 
 .professor-last-name, .professor-position, .table-style {
-	font-weight: 300;
+	font-weight: 300
 }
 
 .professor-position {
 	color: #807F83;
 	font-size: 20px;
 	margin-bottom: 20px;
-	text-align: center;
+	text-align: center
 }
 
 .info-field, .table-style {
 	font-size: 20px;
-	line-height: 30px;
+	line-height: 30px
 }
 
 .info-field {
 	text-align: right;
-	padding-right: 20px;
+	padding-right: 20px
 }
 
 .menu-bar {
@@ -102,20 +103,20 @@ body {
 	margin-top: 20px;
 	height: 25px;
 	width: auto;
-	transition: all 0.2s linear;
+	transition: all 0.2s linear
 }
 
 .navigation a {
 	display: block;
 	font-size: 25px;
 	text-decoration: none;
-	text-align: center;
+	text-align: center
 }
 
 @media (min-width: 0px) {
 	.header, .navigation {
 		flex-direction: column;
-		-webkit-flex-direction: column;
+		-webkit-flex-direction: column
 	}
 	.professor-info {
 		padding-bottom: 40px
@@ -125,7 +126,7 @@ body {
 	}
 	.navigation a {
 		border-bottom: 1px solid white;
-		padding: 17px 20px 18px 20px;
+		padding: 17px 20px 18px 20px
 	}
 	.navigation a.active-tab {
 		border-color: #4F2683;
@@ -141,7 +142,7 @@ body {
 	}
 	.header, .navigation {
 		flex-direction: row;
-		-webkit-flex-direction: row;
+		-webkit-flex-direction: row
 	}
 	.professor-info {
 		padding-bottom: 0
@@ -151,7 +152,7 @@ body {
 	}
 	.navigation a, .navigation a:first-child {
 		padding: 10px 20px;
-		border-bottom: 5px solid #807F83;
+		border-bottom: 5px solid #807F83
 	}
 	.navigation a.active-tab {
 		border-color: #4F2683;
