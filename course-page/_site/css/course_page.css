@@ -1,0 +1,345 @@
+body {
+	background-color: #eeeeee
+}
+
+.container {
+	margin: 0 auto
+}
+
+.menu-container {
+	height: 60px
+}
+
+.menu, .pancake, .sidebar, .shade {
+	position: fixed
+}
+
+.menu {
+	background-color: rgba(79, 38, 131, 0.95);
+	z-index: 2
+}
+
+.menu, .shade {
+	width: 100%
+}
+
+.menu-contents, .body-container {
+	display: -webkit-flex;
+  	display: flex;
+	
+	flex-direction: row;
+	-webkit-flex-direction: row;
+
+  	-webkit-flex-wrap: wrap;
+  	flex-wrap: wrap
+}
+
+.menu-contents {
+	-webkit-align-items: center;
+	align-items: center
+}
+
+.pancake, .prof-img {
+	margin: 5px
+}
+
+.pancake {
+	z-index: 3;
+  	padding: 10px;
+}
+
+.pancake, .sidebar-items a {
+	cursor: pointer
+}
+
+.pancake, .course-title, .professor-info, .course-title a {
+	color: white
+}
+
+.pancake, .course-title {
+	font-size: 30px;
+}
+
+.clip-circle {
+	height: 50px;
+	width: auto;
+	border-radius: 50%
+}
+
+.prof-img {
+	float: right;
+	padding-left: 10px;
+}
+
+.course-title {
+	line-height: 60px;
+}
+
+.course-title, .professor-info, .sidebar-items a  {
+	font-family: "Lato";
+	font-style: normal;
+}
+
+.course-title, .professor-info {
+	font-weight: 100
+}
+
+.course-title a {
+	text-decoration: none
+}
+
+.course-code, .professor-last-name, .sidebar-items a {
+	font-weight: 300
+}
+
+.menu-filler {
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+}
+
+.professor-info {
+	text-align: right;
+}
+
+.professor-info li {
+	margin-bottom: 2px
+}
+
+.professor-info li:last-child {
+	margin-bottom: 0;
+}
+
+.professor-title, .professor-first-name, .professor-last-name {
+	font-size: 18px;
+}
+
+.email, .office {
+	font-size: 13px;
+}
+
+.sidebar {
+	background-color: rgba(255, 255, 255, 0.75);
+	overflow-y: scroll; 
+
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+}
+
+.sidebar::-webkit-scrollbar { 
+	width: 0!important
+}
+
+.sidebar-items a {
+	display: block;
+	border: 1px solid;
+	border-bottom: none;
+	padding: 19px 10px;
+	color: #4F2683;
+	font-size: 20px;
+	text-decoration: none;
+	overflow-wrap: break-word;
+}
+
+.sidebar-items a, .sidebar-items:last-child {
+	border-color: #807F83
+}
+
+.sidebar-items:last-child {
+	border-bottom: 1px solid
+}
+
+.active-item {
+	background-color: #4F2683;
+	color: white!important;
+}
+
+i.fa{
+	margin-right: 10px;
+}
+
+.contents {
+	position: absolute;
+	left: auto;
+	z-index: 0;
+}
+
+.shade {
+	height: 100%;
+	background-color: black;
+}
+
+@media (min-width: 0px) {
+	.lock {
+		overflow: hidden;
+	}
+	.course-title {
+		padding-left: 50px;
+	}
+	.course-name {
+		display: none;
+	}
+	.professor-info {
+		display: none;
+	}
+	.menu {
+		z-index: 1;
+		left: 0;
+		transition: left 0.2s ease-out;
+	}
+	.pancake {
+		left: 0;
+		transition: left 0.2s ease-out;
+	}
+	.shade {
+		z-index: -2;
+		opacity: 0;
+		left: 0;
+		transition: all 0.2s ease-out;
+	}
+	.sidebar {
+		top:0;
+		height: 100%;
+
+		width: 80%;
+		width: -webkit-calc(100% - 60px);
+	    width: -moz-calc(100% - 60px);
+	    width: calc(100% - 60px);
+
+		left: 80%;
+		left: -webkit-calc(-100% + 60px);
+	    left: -moz-calc(-100% + 60px);
+	    left: calc(-100% + 60px);
+		transition: left 0.2s ease-out;
+	}
+	.contents {
+		width: 100%;
+		margin-left: 0;
+		left:0;
+		transition: left 0.2s ease-out;
+	}
+	.slide .shade {
+		z-index: 2;
+		opacity: 0.7;
+		left: 80%;
+		left: -webkit-calc(100% - 60px);
+	    left: -moz-calc(100% - 60px);
+	    left: calc(100% - 60px);
+		transition: all 0.2s ease-in;
+	}
+	.slide .pancake {
+		left: 80%;
+		left: -webkit-calc(100% - 60px);
+	    left: -moz-calc(100% - 60px);
+	    left: calc(100% - 60px);
+		transition: left 0.2s ease-in;
+	}
+	.slide .menu {
+		z-index: 1;
+		left: 80%;
+		left: -webkit-calc(100% - 60px);
+	    left: -moz-calc(100% - 60px);
+	    left: calc(100% - 60px);
+		transition: left 0.2s ease-in;
+	}
+	.slide .sidebar {
+		left: 0;
+		transition: left 0.2s ease-in;
+	}
+	.slide .contents {
+		left: 80%;
+		left: -webkit-calc(100% - 60px);
+	    left: -moz-calc(100% - 60px);
+	    left: calc(100% - 60px);
+		transition: left 0.2s ease-in;
+	}
+}
+@media (min-width: 450px) {
+	.sidebar {
+		width: 400px;
+		left: -400px;
+	}
+	.slide .shade {
+		left: 400px;
+	}
+	.slide .pancake {
+		left: 400px;
+	}
+	.slide .menu {
+		left: 400px;
+	}
+	.slide .contents {
+		left: 400px;
+	}
+}
+@media (min-width: 768px) {
+	.course-name {
+		display: inline;
+	}
+	.course-title {
+		padding-left: 90px;
+	}
+}
+@media (min-width: 992px) {
+	body {
+		background-image: url("../artwork/bigshield.gif");
+		background-position-x: 90%;
+	  	background-repeat: no-repeat;
+	}
+	.lock {
+		overflow: auto;
+	}
+	.container {
+		width: 992px;
+	}
+	.pancake {
+		display: none;
+		left: -60px;
+	}
+	.course-title {
+		padding-left: 0;
+	}
+	.professor-info {
+		display: inline;
+	}
+	.sidebar {
+		height: auto;
+		width: 230px;
+		left: auto;
+		top: auto;
+		margin: 20px 0;
+	}
+	.contents {
+		width: 742;
+		margin-left: 250px;
+		position: initial;
+		left: auto;
+	}
+	.shade {
+		display: none;
+	}
+	.slide .menu {
+		left: auto;
+	}
+	.slide .sidebar {
+		left: auto;
+	}
+	.slide .contents{
+		left: auto;
+	}
+	.slide .shade {
+		display: none;
+		left: auto;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1200px;
+	}
+	.sidebar {
+		width: 280px;
+	}
+	.contents {
+		width: 900;
+		margin-left: 300px;
+	}
+}

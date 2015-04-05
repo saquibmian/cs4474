@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+	<head>
+	    <meta charset="utf-8">		
+	    <meta name="viewport" content="width=device-width initial-scale=1" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+		<link rel="shortcut icon" href="artwork/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/courses/cs3357a/css/course_page.css">
+		<link rel="stylesheet" type="text/css" href="/courses/cs3357a/css/csd.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+	    <title>CS 3357A - Computer Networks I</title>
+	</head>
+  <body>
+
+	<div id="shade-btn" class="shade"></div>
+	<div class="pancake"><i id="pancake-btn" class="fa fa-bars"></i></div>
+	<div class="menu-container">
+		<div class="menu">
+			<div class="container"><div class="menu-contents">
+				<div class="course-title">
+					<a href="/courses/cs3357a/">
+						<span class="course-code">CS 3357A</span>
+						<span class="course-name">:&nbsp;&nbsp;Computer Networks I</span>
+					</a>
+				</div>
+				<div class="menu-filler"></div>
+				<div class="professor-info">
+					<div class="prof-name">
+						<span class="professor-title"></span>
+						<span class="professor-first-name">Jeff</span>
+						<span class="professor-last-name">Shantz</span>
+					</div>
+					<div class="email"><span class="block-spam">BOTS</span>jeff@csd.uwo.ca</div> 
+					<div class="office">Middlesex College 346</div> 
+				</div>
+				<div class="prof-img">
+					<a href="http://www.csd.uwo.ca/staff/jeff/"><img class="clip-circle" src="/courses/cs3357a/artwork/prof-picture.jpg"></a>
+				</div>
+			</div></div>
+		</div>
+	</div>
+
+	<div class="container"><div class="body-container">
+		
+		<div class="sidebar">
+			<div class="sidebar-items">
+			
+			
+				
+				
+				
+				<a  href="/courses/cs3357a/index.html" target="">
+					<i class="fa fa-bullhorn"></i>
+					Announcements
+				</a>
+			
+				
+				
+				
+				<a  href="/courses/cs3357a/lecture-notes.html" target="">
+					<i class="fa fa-mortar-board"></i>
+					Lecture Notes
+				</a>
+			
+				
+				
+				
+				<a  href="/courses/cs3357a/consulting.html" target="">
+					<i class="fa fa-question-circle"></i>
+					Consulting
+				</a>
+			
+				
+				
+				
+				<a class="active-item" href="/courses/cs3357a/assignments.html" target="">
+					<i class="fa fa-file-code-o"></i>
+					Assignments
+				</a>
+			
+				
+				
+				
+					
+					
+				
+				<a  href="http://jsuwo.github.io/cs3357/lecture-notes/files/cs3357a_fall2014_syllabus.pdf" target="_blank">
+					<i class="fa fa-file-pdf-o"></i>
+					Syllabus
+				</a>
+			
+			</div>
+		</div>
+		
+		<div class="contents">
+		
+
+<div class="box"><a href="/assignments/assignment1.html" class="box-header"><div class="box-title">Assignment 1 - Network Calculator</div><div class="flex-fill"></div><table class="date-info"><tbody><tr><td class="date-title">Posted:</td><td class="date">Sep 25, 2014 at  8:15 AM</td></tr><tr><td class="date-title">Due:</td><td class="date">Oct 17, 2014 at 11:59 PM</td></tr></tbody></table></a><div class="box-content">
+<p>Texas Instruments has a problem: no one wants a simple TI-83 calculator anymore that performs their calculations for them on the spot. Nay, they want an Internet-connected device that will submit mathematical expressions to a server. The server will then evaluate their expressions and return the results back to their device. Who cares about efficiency and speed? This is 2014. Connectivity is where it's at.</p>
+<p> In this assignment, you'll write two programs: a calculator client and a calculator server. The client will take a mathematical expression specified by a user on the command line and submit it over the network to the server. The server will then evaluate the expression, and return the result back to the client where it will be displayed to the user. </p>
+<p><a href="/courses/cs3357a/assignments/assignment1.html">See the assignment</a></p>
+
+</div></div>
+
+
+
+<div class="box"><a href="/assignments/assignment2.html" class="box-header"><div class="box-title">Assignment 2 - Reliable Data Transfer</div><div class="flex-fill"></div><table class="date-info"><tbody><tr><td class="date-title">Posted:</td><td class="date">Oct 14, 2014 at  8:15 AM</td></tr><tr><td class="date-title">Due:</td><td class="date">Nov 14, 2014 at 11:59 PM</td></tr></tbody></table></a><div class="box-content">
+<p> We've studied reliable data transfer and have seen algorithms that might be implemented at the transport layer to ensure that data sent is received correctly.  On the other hand, we've also seen that reliable transport protocols like TCP incur greater overhead than unreliable protocols like UDP, and are subject to the constraints of flow control and congestion control. </p>
+<p> What if we want the performance of UDP — with its low-overhead, unreliable, no-frills service — but the reliability of TCP?  The answer is that we're going to have to build in reliability at a higher layer: the application layer! </p>
+<p> In this assignment, you'll implement the Stop-and-Wait protocol to transfer data reliably between two programs: a client (<code>rftp</code>) and server (<code>rftpd</code>).  The client will take a filename passed on the command line and upload the file to the server using the UDP protocol.  To ensure that all data is received reliably, the client will implement the sender side of the RDT 3.0 protocol discussed in class, while the server will implement the receiver side.  Of course, Stop-and-Wait is not very efficient, but it still gives us practice implementing a reliable data transfer protocol without having to worry about multi-threading, as we would with Go-Back-N or Selective Repeat. </p>
+<p> Along the way, you'll see how to emulate a noisy channel in Linux, creating a <em>queueing discipline</em> that will corrupt, reorder, and lose packets.  In this way, you can accurately test the reliability of your programs and verify that you have correctly implemented the Stop-and-Wait protocol. </p>
+<p> Note: if you took assignment 1 for granted, you probably found it to be more work than you had expected.  I encourage you to get started on this assignment as soon as possible. </p>
+<p><a href="/courses/cs3357a/assignments/assignment2.html">See the assignment</a></p>
+
+</div></div>
+
+
+
+<div class="box"><a href="/assignments/assignment3.html" class="box-header"><div class="box-title">Assignment 3: Head in the Cloud</div><div class="flex-fill"></div><table class="date-info"><tbody><tr><td class="date-title">Posted:</td><td class="date">Sep 25, 2014 at  8:15 AM</td></tr><tr><td class="date-title">Due:</td><td class="date">Oct 17, 2014 at 11:59 PM</td></tr></tbody></table></a><div class="box-content">
+<p> We've now had experience implementing both an ASCII and a binary protocol. The protocols we've implemented to date, however, have been custom protocols. We've also been working exclusively in a virtual machine, running both our clients and servers in the same machine. </p>
+<p>Being a networking course, we would be remiss if we didn't actually try implementing a real protocol, and didn't actually test out said protocol over a real network. </p>
+<p>In this assignment, then, you'll set up a server (called an <em>instance</em>) in the cloud using Amazon EC2.  On this system, you'll install an application-layer server of your choice: a DNS server or an IRC server. </p>
+<p>You'll then write a simple client in C to interact with this server to give you experience implementing a well-known protocol.</p>
+<p><a href="/courses/cs3357a/assignments/assignment3.html">See the assignment</a></p>
+
+</div></div>
+
+
+
+		</div>
+	</div></div>
+
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+		var body = $('body'),
+			js = document.createElement("script"),
+			mobile_jq = document.createElement("script"),
+			link = document.createElement("link"),
+			head = document.getElementsByTagName('head')[0];
+
+		link.rel = "stylesheet";
+    	link.type = "text/css";
+	    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	    	mobile_jq.src = "js/jquery.mobile.custom.min.js";
+		    js.src = "/courses/cs3357a/js/mobile_course.js";
+
+		    document.body.appendChild(mobile_jq);
+	    	document.body.appendChild(js);
+
+	    	//link.href = "/courses/cs3357a/css/course_page_mobile.css";
+	    }
+	    else
+	    	link.href = "/courses/cs3357a/css/course_page_desktop.css";
+
+	    document.head.appendChild(link);
+	</script>
+	<script type="text/javascript">
+		var body = $("body"),
+		toggle_sidebar = false;
+
+		document.getElementById("pancake-btn").addEventListener("click", slide);
+		document.getElementById("shade-btn").addEventListener("click", slide);
+
+		function slide() {
+			if (toggle_sidebar) slideIn();
+			else slideOut();
+		}
+		function slideIn() {
+			toggle_sidebar = false;
+			body.removeClass("slide");
+			body.removeClass("lock");
+		}
+		function slideOut() {
+			toggle_sidebar = true;
+			body.addClass("slide");
+			body.addClass("lock");
+		}
+	</script>
+</body>
+</html>

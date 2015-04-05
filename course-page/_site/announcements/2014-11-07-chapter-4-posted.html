@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+	<head>
+	    <meta charset="utf-8">		
+	    <meta name="viewport" content="width=device-width initial-scale=1" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+		<link rel="shortcut icon" href="artwork/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/courses/cs3357a/css/course_page.css">
+		<link rel="stylesheet" type="text/css" href="/courses/cs3357a/css/csd.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+	    <title>CS 3357A - Computer Networks I</title>
+	</head>
+  <body>
+
+	<div id="shade-btn" class="shade"></div>
+	<div class="pancake"><i id="pancake-btn" class="fa fa-bars"></i></div>
+	<div class="menu-container">
+		<div class="menu">
+			<div class="container"><div class="menu-contents">
+				<div class="course-title">
+					<a href="/courses/cs3357a/">
+						<span class="course-code">CS 3357A</span>
+						<span class="course-name">:&nbsp;&nbsp;Computer Networks I</span>
+					</a>
+				</div>
+				<div class="menu-filler"></div>
+				<div class="professor-info">
+					<div class="prof-name">
+						<span class="professor-title"></span>
+						<span class="professor-first-name">Jeff</span>
+						<span class="professor-last-name">Shantz</span>
+					</div>
+					<div class="email"><span class="block-spam">BOTS</span>jeff@csd.uwo.ca</div> 
+					<div class="office">Middlesex College 346</div> 
+				</div>
+				<div class="prof-img">
+					<a href="http://www.csd.uwo.ca/staff/jeff/"><img class="clip-circle" src="/courses/cs3357a/artwork/prof-picture.jpg"></a>
+				</div>
+			</div></div>
+		</div>
+	</div>
+
+	<div class="container"><div class="body-container">
+		
+		<div class="sidebar">
+			<div class="sidebar-items">
+			
+			
+				
+				
+				
+				<a  href="/courses/cs3357a/index.html" target="">
+					<i class="fa fa-bullhorn"></i>
+					Announcements
+				</a>
+			
+				
+				
+				
+				<a  href="/courses/cs3357a/lecture-notes.html" target="">
+					<i class="fa fa-mortar-board"></i>
+					Lecture Notes
+				</a>
+			
+				
+				
+				
+				<a  href="/courses/cs3357a/consulting.html" target="">
+					<i class="fa fa-question-circle"></i>
+					Consulting
+				</a>
+			
+				
+				
+				
+				<a  href="/courses/cs3357a/assignments.html" target="">
+					<i class="fa fa-file-code-o"></i>
+					Assignments
+				</a>
+			
+				
+				
+				
+					
+					
+				
+				<a  href="http://jsuwo.github.io/cs3357/lecture-notes/files/cs3357a_fall2014_syllabus.pdf" target="_blank">
+					<i class="fa fa-file-pdf-o"></i>
+					Syllabus
+				</a>
+			
+			</div>
+		</div>
+		
+		<div class="contents">
+		<div class="box"><a href="/announcements/2014-11-07-chapter-4-posted.html" class="box-header"><div class="box-title">Chapter 4 lecture notes</div><div class="flex-fill"></div><table class="date-info"><tbody><tr><td class="date-title">Posted:</td><td class="date">Nov 7, 2014 at  6:00 AM</td></tr></tbody></table></a><div class="box-content">
+<p>The lecture notes for chapter 4 have been posted.</p>
+
+</div></div>
+		</div>
+	</div></div>
+
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+		var body = $('body'),
+			js = document.createElement("script"),
+			mobile_jq = document.createElement("script"),
+			link = document.createElement("link"),
+			head = document.getElementsByTagName('head')[0];
+
+		link.rel = "stylesheet";
+    	link.type = "text/css";
+	    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	    	mobile_jq.src = "js/jquery.mobile.custom.min.js";
+		    js.src = "/courses/cs3357a/js/mobile_course.js";
+
+		    document.body.appendChild(mobile_jq);
+	    	document.body.appendChild(js);
+
+	    	//link.href = "/courses/cs3357a/css/course_page_mobile.css";
+	    }
+	    else
+	    	link.href = "/courses/cs3357a/css/course_page_desktop.css";
+
+	    document.head.appendChild(link);
+	</script>
+	<script type="text/javascript">
+		var body = $("body"),
+		toggle_sidebar = false;
+
+		document.getElementById("pancake-btn").addEventListener("click", slide);
+		document.getElementById("shade-btn").addEventListener("click", slide);
+
+		function slide() {
+			if (toggle_sidebar) slideIn();
+			else slideOut();
+		}
+		function slideIn() {
+			toggle_sidebar = false;
+			body.removeClass("slide");
+			body.removeClass("lock");
+		}
+		function slideOut() {
+			toggle_sidebar = true;
+			body.addClass("slide");
+			body.addClass("lock");
+		}
+	</script>
+</body>
+</html>

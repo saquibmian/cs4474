@@ -1,0 +1,161 @@
+body {
+	background-color: #eeeeee;
+}
+
+.container, .table-style {
+	margin: 0 auto;
+}
+
+.header, .navigation {
+	display: -webkit-flex;
+  	display: flex;
+
+  	-webkit-flex-wrap: wrap;
+  	flex-wrap: wrap;
+	
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.header {
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	margin: 0;
+  	list-style-type: none;
+}
+
+.header-filler {
+	-webkit-flex-grow: 7;
+	flex-grow: 7;
+}
+
+.header-filler-2 {
+	-webkit-flex-grow: 3;
+	flex-grow: 3;
+}
+
+.professor {
+	background-color: #4F2683;
+}
+
+.prof-img {
+	padding: 30px 0;
+}
+
+.prof-name {
+	text-align: center;
+}
+
+.clip-circle {
+	height: 280px;
+	width: auto;
+	border-radius: 50%
+}
+
+.professor-info, .table-style, .navigation a {
+	color: white;
+	font-family: "Lato";
+	font-style: normal;
+}
+
+.professor-title, .professor-first-name, .professor-last-name {
+	font-size: 60px;
+}
+
+.professor-title, .professor-first-name, .info-field, .navigation a {
+	font-weight: 100;
+}
+
+.professor-last-name, .professor-position, .table-style {
+	font-weight: 300;
+}
+
+.professor-position {
+	color: #807F83;
+	font-size: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.info-field, .table-style {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.info-field {
+	text-align: right;
+	padding-right: 20px;
+}
+
+.menu-bar {
+	max-height: 60px;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+	background-color: #807F83;
+}
+
+.arrow {
+	position: absolute;
+  	right: 10px;
+	margin-top: 20px;
+	height: 25px;
+	width: auto;
+	transition: all 0.2s linear;
+}
+
+.navigation a {
+	display: block;
+	font-size: 25px;
+	text-decoration: none;
+}
+
+@media (min-width: 0px) {
+	.header, .navigation {
+		flex-direction: column;
+		-webkit-flex-direction: column;
+	}
+	.professor-info {
+		padding-bottom: 40px
+	}
+	.arrow {
+		display: inline
+	}
+	.navigation a {
+		border-bottom: 1px solid white;
+		padding: 17px 20px 18px 20px;
+	}
+	.navigation a.active-tab {
+		border-color: #4F2683
+	}
+	.navigation a:last-child {
+		border-color: #807F83
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: 992px
+	}
+	.header, .navigation {
+		flex-direction: row;
+		-webkit-flex-direction: row;
+	}
+	.professor-info {
+		padding-bottom: 0
+	}
+	.arrow {
+		display: none
+	}
+	.navigation a, .navigation a:first-child {
+		padding: 10px 20px;
+		border-bottom: 5px solid #807F83;
+	}
+	.navigation a.active-tab {
+		border-color: #4F2683
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1200px
+	}
+}
