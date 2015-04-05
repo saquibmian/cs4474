@@ -61,7 +61,11 @@
 					{% assign link = p.link %}
 					{% assign target = "_blank" %}
 				{% endif %}
-				<a {% if p.url == page.url %}class="active-item"{% endif %} href="{{ link }}" target="{{ target }}">
+
+				{% assign linkType = p.title | downcase %}
+				{% assign pageType = page.collection | downcase %}
+
+				<a {% if p.url == page.url or linkType == pageType %}class="active-item"{% endif %} href="{{ link }}" target="{{ target }}">
 					{% if p.icon %}<i class="fa fa-{{ p.icon }}"></i>{% endif %}
 					{{ p.title }}
 				</a>
