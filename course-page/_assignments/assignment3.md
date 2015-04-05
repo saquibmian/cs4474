@@ -1,6 +1,6 @@
 ---
 title: "Assignment 3: Head in the Cloud"
-date: 2014-09-25 08:15:00
+date: 2014-11-25 08:15:00
 due: 2014-10-17 23:59:00
 
 summary: "
@@ -26,11 +26,6 @@ implementing a well-known protocol.</p>
                 <div class="row">
 
   <div class="asn panel panel-default">
-
-    <div class="panel-heading">
-      <h3 class="panel-title">Assignment 3: Head in the Cloud</h3>
-      <p>Due: Wednesday December 03, 2014 at 23:59:59</p>
-    </div>
 
     <div class="panel-body">
 

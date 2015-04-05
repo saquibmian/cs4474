@@ -47,11 +47,6 @@ this assignment as soon as possible.
 
   <div class="asn panel panel-default">
 
-    <div class="panel-heading">
-      <h3 class="panel-title">Assignment 2: Reliable Data Transfer</h3>
-      <p>Due: Friday November 14, 2014 at 23:59:59</p>
-    </div>
-
     <div class="panel-body">
 
       <p>
