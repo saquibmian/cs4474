@@ -16,9 +16,8 @@ module Jekyll
 
     def get_data(context, property)
       data = context[property] || property
-      if data.is_a? String
-        data = { 'title' => context[property] || property }
-      end
+
+      data = { 'title' => context[property] || property } if data.is_a? String
 
       data
     end
@@ -35,9 +34,7 @@ module Jekyll
       due = data['due']
       url = data['url'] || ""
         
-      if !(url.empty?)
-        url = lookup(context,'site.baseurl') + url
-      end
+      url = lookup(context,'site.baseurl') + url unless url.empty?
 
       toReturn = '<div class="box">'
       
@@ -48,12 +45,8 @@ module Jekyll
         if !(date.nil?) || !(due.nil?)
           toReturn << '<div class="flex-fill"></div><table class="date-info"><tbody>'
 
-          if !(date.nil?)
-            toReturn << '<tr><td class="date-title">Posted:</td><td class="date">' + date.strftime(@time_format) + '</td></tr>'
-          end
-          if !(due.nil?)
-            toReturn << '<tr><td class="date-title">Due:</td><td class="date">' + due.strftime(@time_format) + '</td></tr>'
-          end
+          toReturn << '<tr><td class="date-title">Posted:</td><td class="date">' + date.strftime(@time_format) + '</td></tr>' unless date.nil?
+          toReturn << '<tr><td class="date-title">Due:</td><td class="date">' + due.strftime(@time_format) + '</td></tr>' unless due.nil?
 
           toReturn << '</tbody></table>'
         end
