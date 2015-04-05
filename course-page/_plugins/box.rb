@@ -38,7 +38,7 @@ module Jekyll
       toReturn = '<div class="box">'
       
       if !(title.empty?)
-        toReturn << '<a href="' + url + '" class="box-header">'
+        toReturn << '<a href="' + lookup(context,'site.baseurl') + url + '" class="box-header">'
         toReturn << '<div class="box-title">' + title + '</div>'
         
         if !(date.nil?) || !(due.nil?)
