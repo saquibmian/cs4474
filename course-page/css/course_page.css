@@ -15,7 +15,8 @@ body {
 }
 
 .menu {
-	background-color: rgba(79, 38, 131, 0.95);
+	background-color: #4F2683;
+	background-image: url("../artwork/background-art.jpg");
 	z-index: 2
 }
 
