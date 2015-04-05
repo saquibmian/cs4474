@@ -69,9 +69,7 @@ body {
 
 @media (min-width: 0px) {
 	.box {
-		margin: 20px  0  0  0; 
-		border-top: 1px solid #807F83;
-		border-bottom: 1px solid #807F83;
+		margin: 20px  0  0  0;
 	}
 	.box-header {
 		flex-direction: column;
@@ -83,7 +81,6 @@ body {
 	.box-header .date-info {
 		text-align: left;
 		padding-top: 10px;
-		background-color: #807F83;
 		margin: 0;
 		display: block;
 	}
@@ -96,7 +93,6 @@ body {
 @media (min-width: 992px) {
 	.box {
 		margin: 20px 0;
-		border: 1px solid #807F83;
 	}
 	.box-header {
 		flex-direction: row;

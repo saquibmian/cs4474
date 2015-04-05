@@ -131,8 +131,7 @@ body {
 
 .sidebar-items a {
 	display: block;
-	border: 1px solid;
-	border-bottom: none;
+	border-bottom: 1px solid;
 	padding: 19px 10px;
 	color: #4F2683;
 	font-size: 20px;
@@ -140,12 +139,12 @@ body {
 	overflow-wrap: break-word;
 }
 
-.sidebar-items a, .sidebar-items:last-child {
+.sidebar-items a, .sidebar-items a:last-child {
 	border-color: #807F83
 }
 
-.sidebar-items:last-child {
-	border-bottom: 1px solid
+.sidebar-items a:last-child {
+	border-bottom: none
 }
 
 .active-item {
