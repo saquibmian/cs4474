@@ -82,7 +82,10 @@ body {
 		text-align: left;
 		padding-top: 10px;
 		margin: 0;
-		display: block;
+		display: block
+	}
+	.date-info {
+		background-color: #807F83
 	}
 }
 @media (min-width: 768px) {
